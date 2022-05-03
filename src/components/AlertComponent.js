@@ -15,7 +15,7 @@ function AlertComponent({id, title, text, type, link, timeout}) {
                <List>
                  <ListItemText primary={text} />
                  <ListItemText primary={timeout} />
-                 <Link href={link} target="_blank" >{link}</Link>
+                 { link ? <Link href={link} target="_blank" >{link}</Link> : <ListItemText primary={'No Link Available'} /> }
                </List>
            </Alert>
     );
